@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E4E4E4"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/gameName"
+        android:layout_width="318dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="35dp"
+        android:fontFamily="casual"
+        android:text="Xarithmetics"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/Player1Indicator"
+        app:layout_constraintEnd_toStartOf="@+id/Player1Score"
+        app:layout_constraintStart_toStartOf="@+id/Player1Score"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Player1Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="19dp"
+        android:fontFamily="casual"
+        android:text="Player 1 Total:"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Player1Score"
+        app:layout_constraintEnd_toStartOf="@+id/Player1Score"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/RollDieButton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="185dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="91dp"
+        android:fontFamily="casual"
+        android:text="Roll Die"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/grey"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/answer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/PlayerIndicator"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/PlayerIndicator"
+        android:layout_width="183dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
+        android:fontFamily="casual"
+        android:text="Current Player:"
+        android:textAlignment="viewStart"
+        android:textSize="25sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/CurrentPlayer"
+        app:layout_constraintEnd_toStartOf="@+id/JackpotNumber"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/CurrentPlayer"
+        android:layout_width="43dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="309dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="309dp"
+        android:fontFamily="casual"
+        android:text="CP"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/musicButton"
+        app:layout_constraintEnd_toEndOf="@+id/gameName"
+        app:layout_constraintStart_toEndOf="@+id/Player2Score"
+        app:layout_constraintTop_toTopOf="@+id/gameName" />
+
+    <TextView
+        android:id="@+id/Player2Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:fontFamily="casual"
+        android:text="Player 2 Total:"
+        android:textSize="25sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Player2Score"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Player2Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="casual"
+        android:text="PS2"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/Player2Indicator"
+        app:layout_constraintTop_toBottomOf="@+id/Player1Score" />
+
+    <TextView
+        android:id="@+id/Player1Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="123dp"
+        android:layout_marginEnd="42dp"
+        android:fontFamily="casual"
+        android:text="PS1"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/DieImage"
+        app:layout_constraintStart_toEndOf="@+id/Player1Indicator"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnknownId" />
+
+    <ImageView
+        android:id="@+id/DieImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Player2Score"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Player1Score"
+        app:layout_constraintTop_toTopOf="@+id/Player1Score"
+        app:srcCompat="@android:mipmap/sym_def_app_icon" />
+
+    <TextView
+        android:id="@+id/JackpotIndicator"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginEnd="42dp"
+        android:fontFamily="casual"
+        android:text="Current Jackpot: "
+        android:textSize="25sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/JackpotNumber"
+        app:layout_constraintEnd_toStartOf="@+id/JackpotNumber"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/JackpotNumber"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="259dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="259dp"
+        android:fontFamily="casual"
+        android:text="JN"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/answer"
+        app:layout_constraintEnd_toEndOf="@+id/gameName"
+        app:layout_constraintStart_toStartOf="@+id/CurrentPlayer"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/problem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="11dp"
+        android:fontFamily="casual"
+        android:text="Problem"
+        android:textSize="40sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/equals"
+        app:layout_constraintEnd_toStartOf="@+id/equals"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/equals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="119dp"
+        android:fontFamily="casual"
+        android:text="="
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/musicButton"
+        app:layout_constraintEnd_toStartOf="@+id/answer"
+        app:layout_constraintStart_toEndOf="@+id/problem" />
+
+    <EditText
+        android:id="@+id/answer"
+        android:layout_width="0dp"
+        android:layout_height="61dp"
+        android:layout_marginEnd="29dp"
+        android:ems="10"
+        android:fontFamily="casual"
+        android:inputType="number"
+        android:maxLength="7"
+        android:textSize="30sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/equals"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/equals"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/guessButton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="0dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="22dp"
+        android:fontFamily="casual"
+        android:text="Guess"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/musicButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/answer" />
+
+    <ImageButton
+        android:id="@+id/musicButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        app:layout_constraintBottom_toTopOf="@+id/Copyright"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_lock_silent_mode"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/Copyright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="© 2024 Deniz K Acikbas. All rights are reserved."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
